@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Organisation</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600&display=swap">
+
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			outline: none;
+		}
+
+			.btn-primary{
+				background-color: #AE1369;
+				padding: 3%;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				text-align: center;
+				border-radius: 10px;
+			}
+
+			.btn-primary:hover{
+				background-color: #F9C5D1;
+			}
+		}
+		body{
+			font-family: 'Poppins', sans-serif;
+		}
+		.wrapper{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 70px 0;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		.menu{
+			width: 70%;
+		}
+		.content{
+			width: 100%;
+		}
+		select{
+			width: 100%;
+			padding: 15px;
+			font-size: 16px;
+			font-weight: 700;
+			font-family: 'Poppins', sans-serif;
+			border: none;
+			border-radius: 8px;
+			border: 2px solid #AE1369;
+			box-shadow: 0 15px 15px #F9C5D1;
+		}
+
+		.content{
+			margin: 30px 0;
+		}
+		.content .data{
+			padding: 25px;
+			background-color: #BF9000;
+			border: 5px solid #fff;
+			border-radius: 15px;
+		}
+		.content p{
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			text-align: center;
+			border-bottom: 1px solid gainsboro;
+
+		}
+		.content p:last-child{
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+        .content p b{
+        	font-weight: 700;
+        }
+        .content p span{
+        	float: right;
+        	font-weight: normal;
+        }
+        .content img{
+        	width: 350px;
+        }
+        .image{
+        	text-align: center;
+        }
+        .data{
+        	display: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<select id="organisation">
+				<option value="makna">MAKNA - Majlis Kanser Nasional</option>
+				<option value="bcf">Breast Cancer Foundation</option>
+				<option value="ncs">National Cancer Society</option>
+		</select>
+		</div>
+
+<div class="content">
+	<div id="makna" class="data">
+		<p class="image"><img src="https://assets.theedgemarkets.com/makna_national-cancer-council-malaysia.png" alt=""></p>
+		<p><b>MAKNA - Majlis Kanser Nasional</b></p><br>
+		<p>MAKNA (Majlis Kanser Nasional) or National Cancer Council Malaysia is a not-for-profit social enterprise that works to reduce the pain, suffering and morbidity that cancer patients often experience. It aims to provide curative care, preventive care, cancer research and support services to cancer patients and their families, high-risk groups, and the general public in Malaysia and abroad. It also operates a bursary program providing financial support to people with cancer.</p><br>
+		<p><a href="https://donate.makna.org.my" class="btn-primary">DONATE</a></p>
+	</div>
+	<div id="bcf" class="data">
+		<p class="image"><img src="https://x-default-stgec.uplynk.com/ausw/slices/1ae/22f3150cc15946e68b21f11967cfb8d1/1ae08c0c27b84f2984b71724b5dec1e7/poster_87415f43b2144a558cfbc9de900d67de.jpg" alt=""></p>
+		<p><b>Breast Cancer Foundation</b></p><br>
+		<p>In the last 14 years, the Breast Cancer Foundation has run numerous awareness campaigns together with the public sector and private sector. It has also run empowerment programmes for breast cancer survivors who are living their lives to the fullest after beating the disease. It has also contributed to breast cancer patients directly through monetary support such as through our Breast Cancer Foundation Patient Fund.</p><br>
+		<p><a href="https://www.breastcancerfoundation.org.my/donate" class="btn-primary">DONATE</a></p>
+	</div>
+	<div id="ncs" class="data">
+		<p class="image"><img src="https://d2yy7txqjmdbsq.cloudfront.net/nonprofits/08d581f5-0ec2-489c-8cfc-fafcc14c4360/8227/gal_NCSMPeople.jpg" alt=""></p>
+		<p><b>National Cancer Society</b></p><br>
+		<p>The National Cancer Society of Malaysia (Persatuan Kanser Kebangsaan Malaysia), (NCSM), is the first not-for-profit cancer organisation in Malaysia that provides education, care and support services for people affected by cancer and the general public.
+
+		Established in 1966, we are a tax-exempt charity body registered under the laws of the Malaysian Societies Act and Registrar of Societies Malaysia. The Society was founded by the late Dato’ Dr S.K. Dharmalingam, Malaysia’s first oncologist, and was launched by then Prime Minister of Malaysia, the late YAB Tun Abdul Razak. NCSM is now under the distinguished patronage of His Royal Highness Sultan Paduka Seri Sultan Perak Darul Ridzuan, Sultan Nazrin Muizzudin Shah.</p><br>
+		<p><a href="https://cancer.org.my/donate/" class="btn-primary">DONATE</a></p>
+	</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#organisation").on('change', function(){
+			$(".data").hide();
+			$("#" + $(this).val()).fadeIn(700);
+		}).change();
+	});
+	
+</script>
+</body>
+</html>
